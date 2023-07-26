@@ -18,3 +18,7 @@ app.use('/api/v1',user)
 app.listen(PORT,() => {
     console.log(`App is running on port ${PORT}`)
 })
+
+app.get("/",(req, res) => {
+    res.send("<h1><strong><em>Yee buddy Light weight</em></strong></h1>")
+})

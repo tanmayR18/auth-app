@@ -86,6 +86,12 @@ exports.login = async(req, res) => {
             role:user.role
         }
 
+
+        // let hashed = await bcrypt.hash(password, 10)
+
+        // console.log("users entered password",hashed)
+        // console.log("Db password",user.password)
+
         if(await bcrypt.compare(password,user.password)){
             //password matched
             let token = jwt.sign(
